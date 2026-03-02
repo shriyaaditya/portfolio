@@ -7,13 +7,13 @@ const ParallaxBackground = () => {
     damping: 50,
     stiffness: 100,
   });
-  const cloud1X = useTransform(smoothScroll, [0, 1], ["0%", "30%"]);
-  const cloud2X = useTransform(smoothScroll, [0, 1], ["20%", "0%"]);
-  const moonY = useTransform(smoothScroll, [0, 1], ["70%", "0%"]);
-  const mountain3Y = useTransform(smoothScroll, [0, 1], ["40%", "0%"]);
-  const forestX = useTransform(smoothScroll, [0, 1], ["-10%", "0%"]);
-  const mountain2Y = useTransform(smoothScroll, [0, 1], ["10%", "0%"]);
-  const mountain1Y = useTransform(smoothScroll, [0, 1], ["30%", "0%"]);
+  const cloud1X = useTransform(smoothScroll, [0, 1], ["30%", "0%"]);
+  const cloud2X = useTransform(smoothScroll, [0, 1], ["0%", "20%"]);
+  const moonY = useTransform(smoothScroll, [0, 1], ["0%", "70%"]);
+  const mountain3Y = useTransform(smoothScroll, [0, 1], ["0%", "40%"]);
+  const forestX = useTransform(smoothScroll, [0, 1], ["0%", "-10%"]);
+  const mountain2Y = useTransform(smoothScroll, [0, 1], ["0%", "10%"]);
+  const mountain1Y = useTransform(smoothScroll, [0, 1], ["0%", "30%"]);
 
   return (
     <div className="absolute inset-0 z-0 overflow-hidden">
@@ -121,9 +121,9 @@ const ParallaxBackground = () => {
         md:right-[-40%]
         md:translate-x-0
     
-        w-[220px]
-        sm:w-[260px]
-        md:w-[300px]"
+        w-55
+        sm:w-65
+        md:w-75"
         
         style={{
          
