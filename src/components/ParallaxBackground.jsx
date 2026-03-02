@@ -26,8 +26,6 @@ const ParallaxBackground = () => {
              bg-cover"
       />
 
-   
-      
       <motion.div
         className="absolute hidden md:block"
         style={{
@@ -111,14 +109,24 @@ const ParallaxBackground = () => {
         }}
       />
 
-
-
-
-<motion.div
-        className="absolute"
+      <motion.div
+        className="absolute 
+        top-[40%]             
+        left-1/2
+        -translate-x-1/2
+    
+        md:top-auto            
+        md:bottom-[-10%]        
+        md:left-auto
+        md:right-[-40%]
+        md:translate-x-0
+    
+        w-[220px]
+        sm:w-[260px]
+        md:w-[300px]"
+        
         style={{
-          top: "7%",
-          left: "40%",
+         
           width: "100%",
           height: "100%",
           backgroundImage: "url(/assets/skater.png)",
@@ -126,40 +134,27 @@ const ParallaxBackground = () => {
           backgroundRepeat: "no-repeat",
           x: cloud2X,
         }}
-  animate={{ 
-    x: 0, 
-    opacity: 1,
-    y: [0, -45, 0]  
-  }}
-  transition={{
-    x: { duration: 1.2, ease: "easeOut" },
-    opacity: { duration: 1 },
-    y: {
-      duration: 4,
-      repeat: Infinity,
-      ease: "easeInOut",
-      delay: 1.2  
-    }
-  }}
-
-
+        animate={{
+          x: 0,
+          opacity: 1,
+          y: [0, -45, 0],
+        }}
+        transition={{
+          x: { duration: 1.2, ease: "easeOut" },
+          opacity: { duration: 1 },
+          y: {
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1.2,
+          },
+        }}
       />
-
-
-
-
-
-
     </div>
-
-
   );
 };
 
 export default ParallaxBackground;
-
-
-
 
 /*
 
