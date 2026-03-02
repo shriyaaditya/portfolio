@@ -17,27 +17,30 @@ const ParallaxBackground = () => {
 
   return (
     <div className="absolute inset-0 z-0 overflow-hidden">
-    <div
-  className="absolute inset-0 w-full h-full 
+      <div
+        className="absolute inset-0 w-full h-full 
              bg-[url('/assets/mobileSky.png')] 
              md:bg-[url('/assets/sky.png')] 
              bg-no-repeat 
              bg-bottom 
              bg-cover"
-/>
+      />
+
+   
+      
       <motion.div
-  className="absolute hidden md:block"
-  style={{
-    top: "50%",        
-    right: "20%",        
-    width: "12vw",       
-    height: "12vw",
-    backgroundImage: "url(/assets/moon.png)",
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-    y: moonY,            
-  }}
-/>
+        className="absolute hidden md:block"
+        style={{
+          top: "50%",
+          right: "20%",
+          width: "12vw",
+          height: "12vw",
+          backgroundImage: "url(/assets/moon.png)",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          y: moonY,
+        }}
+      />
       <motion.div
         className="absolute inset-0"
         style={{
@@ -107,8 +110,82 @@ const ParallaxBackground = () => {
           x: cloud2X,
         }}
       />
+
+
+
+
+<motion.div
+        className="absolute"
+        style={{
+          top: "7%",
+          left: "40%",
+          width: "100%",
+          height: "100%",
+          backgroundImage: "url(/assets/skater.png)",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          x: cloud2X,
+        }}
+  animate={{ 
+    x: 0, 
+    opacity: 1,
+    y: [0, -45, 0]  
+  }}
+  transition={{
+    x: { duration: 1.2, ease: "easeOut" },
+    opacity: { duration: 1 },
+    y: {
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut",
+      delay: 1.2  
+    }
+  }}
+
+
+      />
+
+
+
+
+
+
     </div>
+
+
   );
 };
 
 export default ParallaxBackground;
+
+
+
+
+/*
+
+
+<motion.div
+  className="absolute right-[5%] bottom-[5%] 
+             w-[120px] sm:w-[150px] md:w-[220px]"
+  style={{
+    backgroundImage: "url(/assets/skater.png)",
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+  }}
+  initial={{ x: "100%", opacity: 0 }}
+  animate={{ 
+    x: 0, 
+    opacity: 1,
+    y: [0, -15, 0]  // floating loop
+  }}
+  transition={{
+    x: { duration: 1.2, ease: "easeOut" },
+    opacity: { duration: 1 },
+    y: {
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut",
+      delay: 1.2  // start floating after slide
+    }
+  }}
+/>*/
