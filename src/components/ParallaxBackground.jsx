@@ -17,17 +17,16 @@ const ParallaxBackground = () => {
 
   return (
     <div className="absolute inset-0 z-0 overflow-hidden">
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: "url(/assets/sky.png)",
-          backgroundPosition: "bottom",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      />
+    <div
+  className="absolute inset-0 w-full h-full 
+             bg-[url('/assets/mobileSky.png')] 
+             md:bg-[url('/assets/sky.png')] 
+             bg-no-repeat 
+             bg-bottom 
+             bg-cover"
+/>
       <motion.div
-  className="absolute"
+  className="absolute hidden md:block"
   style={{
     top: "50%",        
     right: "20%",        
