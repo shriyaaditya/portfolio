@@ -489,8 +489,8 @@ const StyledWrapper = styled.div`
 
   @media (max-width: 768px) {
     .glass {
-      width: 30px;
-      height: 30px;
+      width: 80px;
+      height: 70px;
       margin: 0 -12px;
     }
 
