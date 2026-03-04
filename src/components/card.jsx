@@ -433,45 +433,83 @@ const StyledWrapper = styled.div`
   .container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 28px;
+    width: 100%;
   }
 
   .row {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .glass {
-    width: 160px;
-    height: 140px;
+    width: 180px;
+    height: 150px;
     background: linear-gradient(#ffffff22, transparent);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    border-radius: 12px;
+    border-radius: 10px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: 0.5s ease;
-    margin: 0 -30px;
+
+    transition: 0.45s ease;
+    margin: 0 -18px;
+
     transform: rotate(calc(var(--r) * 1deg));
   }
 
   .row:hover .glass {
     transform: rotate(0deg);
-    margin: 0 15px;
+    margin: 0 12px;
   }
 
   svg {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
   }
 
   .label {
-    margin-top: 10px;
+    margin-top: 6px;
     color: white;
-    font-size: 14px;
+    font-size: 11px;
+  }
+
+  @media (max-width: 1024px) {
+    .glass {
+      width: 95px;
+      height: 85px;
+      margin: 0 -14px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .glass {
+      width: 30px;
+      height: 30px;
+      margin: 0 -12px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .label {
+      font-size: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .glass {
+      width: 60px;
+      height: 70px;
+      margin: 0 -10px;
+    }
   }
 `;
 
