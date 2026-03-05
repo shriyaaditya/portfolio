@@ -1,27 +1,30 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-const Card = () => {
+const Card = ({ title, description, month, date, seeMore }) => {
   return (
     <StyledWrapper>
       <div className="parent">
         <div className="card">
           <div className="content-box">
-            <span className="card-title">ProjectID</span>
-            <p className="card-content">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </p>
-            <span className="see-more">See More</span>
+            <span className="card-title">{title}</span>
+
+            <p className="card-content">{description}</p>
+
+            <a className="see-more" href={seeMore}>
+              See More
+            </a>
           </div>
+
           <div className="date-box">
-            <span className="month">JUNE</span>
-            <span className="date">29</span>
+            <span className="month">{month}</span>
+            <span className="date">{date}</span>
           </div>
         </div>
       </div>
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
   .parent {

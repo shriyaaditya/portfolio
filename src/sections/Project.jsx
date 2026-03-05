@@ -1,25 +1,29 @@
 import React from "react";
-import ProjectCard from "../components/ProjectCard.jsx";
+import Card from "../components/ProjectCard.jsx";
+import { myProjects } from "../constants/index.js";
 
-const Project = () => {
-  const projects = new Array(6).fill(null);
-
+const ProjectsSection = () => {
   return (
-<section className="c-space section-spacing" id="about">
-    <h2 className="text-heading pb-10 md:pb-12">Projects</h2>
     <div
-      className="grid grid-cols-1 md:grid-cols-3 gap-12
-      items-center
-      justify-items-center
-      p-6 md:p-10"
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(3, 1fr)",
+        gap: "20px",
+        justifyItems: "center",
+      }}
     >
-      {projects.map((_, index) => (
-        <ProjectCard key={index} />
+      {myProjects.map((project) => (
+        <Card
+          key={project.id}
+          title={project.title}
+          description={project.description}
+          month={project.month}
+          date={project.date}
+          seeMore={project.href}
+        />
       ))}
     </div>
-
-    </section>
   );
 };
 
-export default Project;
+export default ProjectsSection;
