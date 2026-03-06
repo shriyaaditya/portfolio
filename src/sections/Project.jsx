@@ -4,6 +4,8 @@ import { myProjects } from "../constants/index.js";
 
 const ProjectsSection = () => {
   return (
+    <section className="c-space section-spacing" id="projects">
+  <h2 className="text-heading pb-10 md:pb-12">Projects</h2>
     <div
       style={{
         display: "grid",
@@ -23,6 +25,7 @@ const ProjectsSection = () => {
         />
       ))}
     </div>
+    </section> 
   );
 };
 
