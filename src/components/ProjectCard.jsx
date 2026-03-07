@@ -1,21 +1,35 @@
 import React from "react";
 import styled from "styled-components";
 
-const Card = ({ title, description, month, date, seeMore }) => {
+const ProjectCard = ({ title, description, month, date, seeMore, tags = [] }) => {
   return (
     <StyledWrapper>
       <div className="parent">
         <div className="card">
           <div className="content-box">
+
+            {/* TECH STACK TAGS */}
+            <div className="tags">
+              {tags.map((tag, index) => (
+                <span key={index} className="tag">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            {/* PROJECT TITLE */}
             <span className="card-title">{title}</span>
 
+            {/* DESCRIPTION */}
             <p className="card-content">{description}</p>
 
+            {/* SEE MORE BUTTON */}
             <a className="see-more" href={seeMore}>
               See More
             </a>
           </div>
 
+          {/* DATE BOX */}
           <div className="date-box">
             <span className="month">{month}</span>
             <span className="date">{date}</span>
@@ -34,16 +48,13 @@ const StyledWrapper = styled.div`
   }
 
   .card {
+    position: relative;
     padding-top: 50px;
-    /* border-radius: 10px; */
     border: 3px solid #141414;
     transform-style: preserve-3d;
     background: linear-gradient(135deg, #0000 18.75%, #f3f3f3 0 31.25%, #0000 0),
       repeating-linear-gradient(45deg, #f3f3f3 -6.25% 6.25%, #141414 0 18.75%);
     background-size: 60px 60px;
-    background-position:
-      0 0,
-      0 0;
     background-color: #141414;
     width: 100%;
     box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;
@@ -51,19 +62,46 @@ const StyledWrapper = styled.div`
   }
 
   .card:hover {
-    background-position:
-      -100px 100px,
-      -100px 100px;
+    background-position: -100px 100px, -100px 100px;
     transform: rotate3d(0.5, 1, 0, 30deg);
   }
 
   .content-box {
     background: #EB6FB7;
-    /* border-radius: 10px 100px 10px 10px; */
     transition: all 0.5s ease-in-out;
     padding: 60px 25px 25px 25px;
     transform-style: preserve-3d;
   }
+
+  /* TAGS */
+
+  .tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    transform: translate3d(0px, 0px, 40px);
+  }
+
+  .tag {
+    font-size: 8px;
+    font-weight: 700;
+    padding: 4px 6px;
+    background: #141414;
+    color: #EB6FB7;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid #141414;
+    transition: all 0.3s ease;
+  }
+
+  .tag:hover {
+    background: #EB6FB7;
+    color: #141414;
+    transform: translate3d(0px, 0px, 50px);
+  }
+
+  /* TITLE */
 
   .content-box .card-title {
     display: inline-block;
@@ -78,6 +116,8 @@ const StyledWrapper = styled.div`
     transform: translate3d(0px, 0px, 60px);
   }
 
+  /* DESCRIPTION */
+
   .content-box .card-content {
     margin-top: 10px;
     font-size: 12px;
@@ -91,6 +131,8 @@ const StyledWrapper = styled.div`
     transform: translate3d(0px, 0px, 60px);
   }
 
+  /* BUTTON */
+
   .content-box .see-more {
     cursor: pointer;
     margin-top: 1rem;
@@ -99,9 +141,9 @@ const StyledWrapper = styled.div`
     font-size: 9px;
     text-transform: uppercase;
     color: #EB6FB7;
-    /* border-radius: 5px; */
     background: #141414;
     padding: 0.5rem 0.7rem;
+    text-decoration: none;
     transition: all 0.5s ease-in-out;
     transform: translate3d(0px, 0px, 20px);
   }
@@ -109,6 +151,8 @@ const StyledWrapper = styled.div`
   .content-box .see-more:hover {
     transform: translate3d(0px, 0px, 60px);
   }
+
+  /* DATE BOX */
 
   .date-box {
     position: absolute;
@@ -118,7 +162,6 @@ const StyledWrapper = styled.div`
     width: 60px;
     background: #141414;
     border: 1px solid #EB6FB7;
-    /* border-radius: 10px; */
     padding: 10px;
     transform: translate3d(0px, 0px, 80px);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
@@ -139,6 +182,7 @@ const StyledWrapper = styled.div`
     font-size: 20px;
     font-weight: 900;
     color: #EB6FB7;
-  }`;
+  }
+`;
 
-export default Card;
+export default ProjectCard;

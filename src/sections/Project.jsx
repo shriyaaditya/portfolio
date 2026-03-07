@@ -6,7 +6,7 @@ const ProjectsSection = () => {
   return (
     <section className="c-space section-spacing" id="projects">
   <h2 className="text-heading pb-10 md:pb-12">Projects</h2>
-    <div
+  <div
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
@@ -22,6 +22,7 @@ const ProjectsSection = () => {
           month={project.month}
           date={project.date}
           seeMore={project.href}
+          tags={project.tags}
         />
       ))}
     </div>
