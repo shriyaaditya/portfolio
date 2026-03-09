@@ -10,7 +10,29 @@ export const myProjects = [
       tags: ["AI", "Healthcare", "Mobile"],
     },
     {
-      id: 2,
+        id: 2,
+        title: "BeaconX",
+        description:
+          "BeaconX is an all-in-one government platform for managing disasters, coordinating emergency response, and delivering real-time alerts.",
+        month: "AUG",
+        date: "19",
+        seeMore: "#",
+        tags: ["GCP", "MERN", "Firebase"],
+    },
+
+    {
+        id: 4,
+        title: "OpenCode Website",
+        description:
+          "Developed a smooth modern website using GSAP and Framer Motion for fluid animations and an enhanced user experience.",
+        month: "JUL",
+        date: "26",
+        seeMore: "#",
+        tags: ["JavaScript", "GIS", "Voice AI"],
+     },
+     
+    {
+      id: 3,
       title: "HackNITR Website",
       description:
         "Developed the official hackathon website with real-time updates, responsive UI, and seamless navigation for participants.",
@@ -19,26 +41,8 @@ export const myProjects = [
       seeMore: "#",
       tags: ["React", "Frontend", "Web"],
     },
-    {
-      id: 3,
-      title: "Smart Cycle Parking",
-      description:
-        "A smart cycle parking system for NIT Rourkela using QR-based locking and a 'Find My Cycle' feature to improve campus parking.",
-      month: "AUG",
-      date: "19",
-      seeMore: "#",
-      tags: ["IoT", "Web", "Campus Tech"],
-    },
-    {
-      id: 4,
-      title: "Voice Navigation Web App",
-      description:
-        "A voice-enabled navigation system integrating GIS maps and real-time weather/events for better travel planning.",
-      month: "JUL",
-      date: "26",
-      seeMore: "#",
-      tags: ["JavaScript", "GIS", "Voice AI"],
-    },
+   
+   
     {
       id: 5,
       title: "Security Layer for APKs",
