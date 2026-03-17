@@ -67,7 +67,7 @@ const StyledWrapper = styled.div`
   }
 
   .content-box {
-    background: #EB6FB7;
+    background: #977de8;
     transition: all 0.5s ease-in-out;
     padding: 60px 25px 25px 25px;
     transform-style: preserve-3d;
@@ -88,7 +88,7 @@ const StyledWrapper = styled.div`
     font-weight: 700;
     padding: 4px 6px;
     background: #141414;
-    color: #EB6FB7;
+    color: #977de8;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     border: 1px solid #141414;
@@ -96,7 +96,7 @@ const StyledWrapper = styled.div`
   }
 
   .tag:hover {
-    background: #EB6FB7;
+    background: #977de8;
     color: #141414;
     transform: translate3d(0px, 0px, 50px);
   }
@@ -140,7 +140,7 @@ const StyledWrapper = styled.div`
     font-weight: 900;
     font-size: 9px;
     text-transform: uppercase;
-    color: #EB6FB7;
+    color: #977de8;
     background: #141414;
     padding: 0.5rem 0.7rem;
     text-decoration: none;
@@ -161,7 +161,7 @@ const StyledWrapper = styled.div`
     height: 60px;
     width: 60px;
     background: #141414;
-    border: 1px solid #EB6FB7;
+    border: 1px solid #977de8;
     padding: 10px;
     transform: translate3d(0px, 0px, 80px);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
@@ -173,7 +173,7 @@ const StyledWrapper = styled.div`
   }
 
   .date-box .month {
-    color: #EB6FB7;
+    color: #977de8;
     font-size: 9px;
     font-weight: 700;
   }
@@ -181,7 +181,7 @@ const StyledWrapper = styled.div`
   .date-box .date {
     font-size: 20px;
     font-weight: 900;
-    color: #EB6FB7;
+    color: #977de8;
   }
 `;
 

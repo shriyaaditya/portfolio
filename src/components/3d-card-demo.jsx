@@ -71,7 +71,36 @@ export default function ThreeDCardDemo() {
             transition
           "
           >
-            Connect
+            <a
+              href="https://www.linkedin.com/in/shriya-adityaa-dalai/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Connect via LinkedIn
+            </a>
+          </CardItem>
+
+          <CardItem
+            translateZ={20}
+            as="button"
+            className="
+            px-4 py-2
+            rounded-lg
+            bg-black
+            text-white
+            text-xs sm:text-sm
+            font-semibold
+            hover:scale-105
+            transition
+          "
+          >
+            <a
+              href="mailto:shriyadalai6@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Send Mail
+            </a>
           </CardItem>
         </div>
       </CardBody>
