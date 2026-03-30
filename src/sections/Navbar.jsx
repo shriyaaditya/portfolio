@@ -1,71 +1,49 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-function Navigation() {
-  return (
-    <ul className="nav-ul">
-      <li className="nav-li">
-        <a className="nav-link" href="#home">
-          Home
-        </a>
-      </li>
-      <li className="nav-li">
-        <a className="nav-link" href="#about">
-          About
-        </a>
-      </li>
-      <li className="nav-li">
-        <a className="nav-link" href="#work">
-          Work
-        </a>
-      </li>
-      <li className="nav-li">
-        <a className="nav-link" href="#contact">
-          Contact
-        </a>
-      </li>
-    </ul>
-  );
-}
+import React from "react";
+
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    const offset = 80; 
+
+    if (element) {
+      const y =
+        element.getBoundingClientRect().top +
+        window.pageYOffset -
+        offset;
+
+      window.scrollTo({
+        top: y,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
-      <div className="mx-auto c-space max-w-7xl">
-        <div className="flex items-center justify-between py-4 sm:py-0">
-          <a
-            href="/"
-            className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
-          >
-            Shriya
-          </a>
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
-          >
-            <img
-              src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
-              className="w-6 h-6"
-              alt="toggle"
-            />
-          </button>
-          <nav className="hidden sm:flex">
-            <Navigation />
-          </nav>
-        </div>
-      </div>
-      {isOpen && (
-        <motion.div
-          className="block overflow-hidden text-center sm:hidden"
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          style={{ maxHeight: "100vh" }}
-          transition={{ duration: 1 }}
+    <div className="fixed top-0 left-0 w-full bg-black/60 backdrop-blur-md z-50">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        
+        <h1 className="text-white font-bold text-lg cursor-pointer"
+            onClick={() => scrollToSection("home")}
         >
-          <nav className="pb-5">
-            <Navigation />
-          </nav>
-        </motion.div>
-      )}
+          Shriya
+        </h1>
+
+        <div className="flex gap-6 text-gray-300">
+          <button onClick={() => scrollToSection("home")} className="hover:text-white">
+            Home
+          </button>
+          <button onClick={() => scrollToSection("about")} className="hover:text-white">
+            About
+          </button>
+          <button onClick={() => scrollToSection("projects")} className="hover:text-white">
+            Projects
+          </button>
+          <button onClick={() => scrollToSection("contacts")} className="hover:text-white">
+            Contact
+          </button>
+        </div>
+
+      </div>
     </div>
   );
 };

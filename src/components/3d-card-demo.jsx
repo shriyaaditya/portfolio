@@ -12,9 +12,9 @@ export default function ThreeDCardDemo() {
         relative 
         group/card 
         w-full 
-        max-w-[380px] 
-        sm:max-w-[420px] 
-        md:max-w-[480px]
+        max-w-95 
+        sm:max-w-105 
+        md:max-w-120
         rounded-xl 
         p-4 sm:p-6
       "
@@ -42,12 +42,15 @@ export default function ThreeDCardDemo() {
         <CardItem translateZ="100" className="w-full mt-4">
           <img
             src="https://res.cloudinary.com/doojbkvn6/image/upload/v1772462790/1716181949024_1_sfoovs.png"
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
             className="
             w-full 
             h-auto
-            max-h-[220px] 
-            sm:max-h-[280px] 
-            md:max-h-[320px]
+            max-h-55 
+            sm:max-h-70
+            md:max-h-80
             object-cover 
             rounded-xl
             group-hover/card:shadow-xl
