@@ -65,14 +65,7 @@ const ProjectsSection = () => {
       <div className="relative z-10">
         <h2 className="text-heading pb-10 md:pb-12">Projects</h2>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "20px",
-            justifyItems: "center",
-          }}
-        >
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
           {myProjects.map((project) => (
             <Card
               key={project.id}
