@@ -1,7 +1,6 @@
 
 import ThreeDCardDemo from "../components/3d-card-demo";
-import Card from "../components/card.jsx"
-
+import TechStack from "../components/Techstack";
 
 const About = () => {
   return (
@@ -25,7 +24,7 @@ const About = () => {
     </div>
 
     <div className="w-full flex justify-center">
-      <Card />
+      <TechStack />
     </div>
   </div>
 </section>  );

@@ -47,6 +47,7 @@ const ParallaxBackground = () => {
           backgroundSize: "100%",
           backgroundRepeat: "no-repeat",
           y: mountain3Y,
+          
         }}
       />
       <motion.div

@@ -50,8 +50,8 @@ const Contact = () => {
     }
   };
   return (
-    <section className="relative flex items-center c-space section-spacing " id="contacts">
-      <Particles
+<section className="relative py-16 px-4" id="contact">    
+  <Particles
         className="absolute inset-0 -z-50"
         quantity={100}
         ease={80}
@@ -59,8 +59,8 @@ const Contact = () => {
         refresh
       />
       {showAlert && <Alert type={alertType} text={alertMessage} />}
-      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
-        <div className="flex flex-col items-start w-full gap-5 mb-10">
+      <div className="max-w-md mx-auto p-6 md:p-8 border border-white/10 rounded-2xl bg-primary">       
+      <div className="flex flex-col items-start w-full gap-3 mb-6">
           <h2 className="text-heading">Let's Talk</h2>
           <p className="font-normal text-neutral-400">
             Whether you're loking to build a new website, improve your existing
@@ -68,8 +68,7 @@ const Contact = () => {
           </p>
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
-          <div className="mb-5">
-            <label htmlFor="name" className="feild-label">
+        <div className="mb-4">            <label htmlFor="name" className="feild-label">
               Full Name
             </label>
             <input
@@ -119,7 +118,7 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
+            className="w-full px-1 py-2.5 text-base text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
           >
             {!isLoading ? "Send" : "Sending..."}
           </button>

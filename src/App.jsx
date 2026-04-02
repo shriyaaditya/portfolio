@@ -9,8 +9,7 @@ import Contact from './sections/Contacts.jsx'
 
 const App = () => {
   return (
-    <div className='text-3xl font-bold'>
-      
+   <div className="max-w-8xl mx-auto px-4">      
       <Navbar/>
       <Hero/>
       <About/>

@@ -63,7 +63,7 @@ const ProjectsSection = () => {
 
       {/* Content */}
       <div className="relative z-10">
-        <h2 className="text-heading pb-10 md:pb-12">Projects</h2>
+        <h2 className="text-heading pb-6 md:pb-8">Projects</h2>
 
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
           {myProjects.map((project) => (
